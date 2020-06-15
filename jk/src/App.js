@@ -1,19 +1,22 @@
 import React from 'react';
-import './App.css';
-import { withRouter, Route, Switch, Redirect } from 'react-router';
+// import './App.css';
 import Home from './components/Home'
 import Sort from './components/Sort'
 import News from './components/News'
 import Cart from './components/Cart'
 import My from './components/My'
+
+import { withRouter, Route, Switch, Redirect } from 'react-router';
 import { NavLink } from 'react-router-dom';
-import {Button} from 'antd'
+import { HomeOutlined,AppstoreOutlined,AuditOutlined,ShoppingCartOutlined,UserOutlined } from '@ant-design/icons';
+import { Button } from 'antd'
+import './style/index.css'
 
 
 
 function App() {
   return (
-    <div className="App" style={{display:'flex',flexDirection:'column',alignContent:'space-bewteen',height:'100%'}}>
+    <div className="App" >
       <Switch>
         <Route path='/Home' component={Home}></Route>
         <Route path='/Sort' component={Sort}></Route>
@@ -22,12 +25,12 @@ function App() {
         <Route path='/My' component={My}></Route>
         <Redirect from='/' to='/Home'></Redirect>
       </Switch>
-      <div style={{display:'flex',alignContent:'space-around'}}>
-        <NavLink to='/Home' style={{display:'inline-block',flex:'1',backgroundColor:'lightgreen'}}>Home</NavLink>
-        <NavLink to='/Sort' style={{display:'inline-block',flex:'1',backgroundColor:'lightgreen'}}>Sort</NavLink>
-        <NavLink to='/News' style={{display:'inline-block',flex:'1',backgroundColor:'lightgreen'}}>News</NavLink>
-        <NavLink to='/Cart' style={{display:'inline-block',flex:'1',backgroundColor:'lightgreen'}}>Cart</NavLink>
-        <NavLink to='/My' style={{display:'inline-block',flex:'1',backgroundColor:'lightgreen'}}>My</NavLink>
+      <div className="Appa">
+        <NavLink className="navigation" to='/Home' activeClassName="active"><i><HomeOutlined /></i><div>首页</div></NavLink>
+        <NavLink className="navigation" to='/Sort' activeClassName="active"><i><AppstoreOutlined /></i><div>分类</div></NavLink>
+        <NavLink className="navigation" to='/News' activeClassName="active"><i><AuditOutlined /></i><div>头条</div></NavLink>
+        <NavLink className="navigation" to='/Cart' activeClassName="active"><i><ShoppingCartOutlined /></i><div>购物车</div></NavLink>
+        <NavLink className="navigation" to='/My' activeClassName="active"><i><UserOutlined /></i><div>我的</div></NavLink>
       </div>
     </div>
 

@@ -1,0 +1,39 @@
+$vm_base: 375;
+
+@function vw($px) {
+    @return ($px / 375) * 100vw;
+}
+
+.body{
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+    width: vw(375);
+    position: relative;
+    // display: flex;
+    background: yellow;
+    height: 100vh;
+    .Appa {
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        .navigation {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            width: 20%;
+            color: #333;
+            i{
+                font-size: 24px;
+            }
+            div {
+                font-size: 12px;
+            }
+        }
+        .active{
+            color: #28B2F9;
+        }
+    }
+}
