@@ -1,0 +1,13 @@
+{
+    "name": "jkapi-server", 
+    "version": "1.0.0",
+    "description": "api-server项目API文档", 
+    "title": "api-server API", 
+    "url" : "http://10.3.135.46:1915/api", 
+    "sampleUrl": "http://10.3.135.46:1915/api/user",
+    "forceLanguage":"zh-cn",
+    "template": {
+      "withCompare": true,
+      "withGenerator": true
+    }
+}
