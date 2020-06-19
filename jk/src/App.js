@@ -1,5 +1,5 @@
 import React from 'react';
-// import './App.css';
+import './style/index.css';
 import Home from './components/Home'
 import Sort from './components/Sort'
 import News from './components/News'
@@ -8,7 +8,7 @@ import My from './components/My'
 
 import { withRouter, Route, Switch, Redirect } from 'react-router';
 import { NavLink } from 'react-router-dom';
-import {Button} from 'antd'
+import {HomeOutlined,AppstoreOutlined, AuditOutlined,ShoppingCartOutlined ,UserOutlined } from '@ant-design/icons'
 
 
 
