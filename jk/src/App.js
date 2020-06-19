@@ -8,9 +8,7 @@ import My from './components/My'
 
 import { withRouter, Route, Switch, Redirect } from 'react-router';
 import { NavLink } from 'react-router-dom';
-import { HomeOutlined,AppstoreOutlined,AuditOutlined,ShoppingCartOutlined,UserOutlined } from '@ant-design/icons';
-import { Button } from 'antd'
-import './style/index.css'
+import {Button} from 'antd'
 
 
 
