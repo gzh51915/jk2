@@ -7,11 +7,23 @@ import News from './components/News'
 import Cart from './components/Cart'
 import My from './components/My'
 import { NavLink } from 'react-router-dom';
+<<<<<<< Updated upstream
 import {Button} from 'antd'
+=======
+import { HomeOutlined,AppstoreOutlined,AuditOutlined,ShoppingCartOutlined,UserOutlined } from '@ant-design/icons';
+import './style/index.css'
+>>>>>>> Stashed changes
 
 
 
 function App() {
+function App(props) {
+  // console.log(props)
+  if(props.location.pathname === '/My'){
+    // document.getElementsByClassName('Appa')[0]
+    // console.log(document.getElementsByClassName('Appa'));
+    
+  }
   return (
     <div className="App" style={{display:'flex',flexDirection:'column',alignContent:'space-bewteen',height:'100%'}}>
       <Switch>
