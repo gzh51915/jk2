@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Route,Switch} from 'react-router'
+import {Route,Switch,Redirect} from 'react-router'
 import {NavLink} from 'react-router-dom'
 import Recommend from './Recommend'
 import Attention from './Attention'
@@ -37,6 +37,7 @@ export default class News extends Component {
                         <Route path="/News/liver" component={Liver} exact></Route>   
                         <Route path='/News/blood' component={Blood} exact></Route>
                         <Route path="/News/:type/article/:id" component={PageItem} ></Route>
+                        <Redirect to='/News/recommend'/>
                     </Switch>
                     
                 </div>
