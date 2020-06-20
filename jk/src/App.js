@@ -9,9 +9,13 @@ import Details from './components/Details'
 
 import { withRouter, Route, Switch, Redirect } from 'react-router';
 import { NavLink } from 'react-router-dom';
+<<<<<<< HEAD
 import { HomeOutlined, AppstoreOutlined, AuditOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
 // import { Button } from 'antd'
 import './style/index.css'
+=======
+import {Button} from 'antd'
+>>>>>>> ea8324f6748334750036804fe0f25ca5a842664f
 
 
 
