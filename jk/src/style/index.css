@@ -1,19 +1,19 @@
 .body {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .App {
   width: 100vw;
   position: relative;
-  background: yellow;
-  height: 100vh;
+  background: #fff;
 }
 
 .App .Appa {
   width: 100vw;
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: 0vw;
 }
 
 .App .Appa .navigation {

@@ -7,18 +7,20 @@ $vm_base: 375;
 .body{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .App {
     width: vw(375);
     position: relative;
     // display: flex;
-    background: yellow;
-    height: 100vh;
+    background: #fff;
+    // height: 100vh;
+    // height: 100%;
     .Appa {
         width: 100vw;
-        position: absolute;
-        bottom: 0;
+        position: fixed;
+        bottom: vw(0);
         .navigation {
             display: inline-block;
             text-align: center;

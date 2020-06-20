@@ -1,0 +1,29 @@
+$vm_base: 375;
+
+@function vw($px) {
+    @return ($px / 375) * 100vw;
+}
+
+.header{
+    box-sizing:border-box;
+    width:vw(375);
+    height:vw(37);
+    padding-left:vw(15);
+    padding-right:vw(20);
+    display: flex;
+    font-size:vw(15);
+    a{
+        // flex:1;
+        box-sizing:border-box;
+        vertical-align:center;
+        padding-top:vw(8.5);
+        padding-bottom:vw(8.5);
+        margin:0 vw(10);
+        height:vw(37);
+        color:#000000;
+    }
+    .active{
+        font-weight: 700;
+        border-bottom:2px solid green 
+    }
+}

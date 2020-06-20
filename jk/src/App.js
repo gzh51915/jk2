@@ -14,8 +14,16 @@ import './style/index.css'
 
 
 
-function App() {
-  return (
+function App(props) {
+  let isShow = 'block';
+  console.log(props)
+  if(props.location.pathname.indexOf('News')!=-1 ){
+    isShow = 'none'
+  }
+  else{
+    isShow = 'block'
+  }
+    return (
     <div className="App" >
       <Switch>
         <Route path='/Home' component={Home}></Route>
@@ -23,9 +31,9 @@ function App() {
         <Route path='/News' component={News}></Route>
         <Route path='/Cart' component={Cart}></Route>
         <Route path='/My' component={My}></Route>
-        <Redirect from='/' to='/Home'></Redirect>
+        <Redirect from='/' to='/Home' exact></Redirect>
       </Switch>
-      <div className="Appa">
+      <div className="Appa" style={{display:isShow}}>
         <NavLink className="navigation" to='/Home' activeClassName="active"><i><HomeOutlined /></i><div>首页</div></NavLink>
         <NavLink className="navigation" to='/Sort' activeClassName="active"><i><AppstoreOutlined /></i><div>分类</div></NavLink>
         <NavLink className="navigation" to='/News' activeClassName="active"><i><AuditOutlined /></i><div>头条</div></NavLink>
@@ -35,6 +43,8 @@ function App() {
     </div>
 
   );
+  
+  
 }
 
 export default withRouter(App);
