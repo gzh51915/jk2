@@ -1,5 +1,5 @@
 import React from 'react';
-// import './App.css';
+import './style/index.css';
 import Home from './components/Home'
 import Sort from './components/Sort'
 import News from './components/News'

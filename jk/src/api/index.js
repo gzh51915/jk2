@@ -1,4 +1,5 @@
 import axios from 'axios'
+import Phone from '../components/Phone'
 export const reqRecommend = ()=>{
     return axios.get("https://jktt-api.jianke.com/m/recommends/articles?page=1&size=10")
 }
@@ -37,4 +38,24 @@ export const detailsComments = () => {
 
 export const detailsData = (a) => {
     return axios.get(`http://10.3.135.5:1915/api/home/detail/?productCode=${a}`)
+}
+export const user=(username,password)=>{
+    if(password){
+        return axios.post(`http://10.3.135.5:1915/api/user/login/?username=${username}&password=${password}`)
+    }else{
+        return axios.post(`http://10.3.135.5:1915/api/user/login/?username=${username}`)
+    }
+   
+}
+
+export const code=()=>{
+   return  axios.post(`http://10.3.135.5:1915/api/user/code`)
+}
+
+export const reg = (username,password)=>{
+    return axios.post(`http://10.3.135.5:1915/api/user/?username=${username}&password=${password}`)
+}
+
+export const getCart = ()=>{
+    return axios.get(`http://10.3.135.5:1915/api/cart`)
 }
