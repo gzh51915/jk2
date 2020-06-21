@@ -18,7 +18,7 @@ import './style/index.css'
 function App(props) {
   let isShow = 'block';
   console.log(props)
-  if(props.location.pathname.indexOf('News')!=-1 ){
+  if(props.location.pathname.indexOf('News')!==-1 ){
     isShow = 'none'
   }
   else{
@@ -40,7 +40,7 @@ function App(props) {
         <Route path='/My' component={My}></Route>
         <Redirect from='/' to='/Home' exact></Redirect>
       </Switch>
-      <div className="Appa" style={{display:isShow}}>
+      <div className="Appa" style={{display:isShow,backgroundColor:'#fff'}}>
         <NavLink className="navigation" to='/Home' activeClassName="active"><i><HomeOutlined /></i><div>首页</div></NavLink>
         <NavLink className="navigation" to='/Sort' activeClassName="active"><i><AppstoreOutlined /></i><div>分类</div></NavLink>
         <NavLink className="navigation" to='/News' activeClassName="active"><i><AuditOutlined /></i><div>头条</div></NavLink>

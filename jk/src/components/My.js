@@ -54,8 +54,8 @@ function My(props) {
 
             // 登录注册页
             <div style={{ backgroundColor: '#fff' }}>
-                <header>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 16px', width: '343px', height: '25px', borderBottom: '1px solid #e5e5e5' }}>
+                <header style={{height:'42px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 16px', width: '375px', height: '42px', borderBottom: '1px solid #e5e5e5' }}>
                         <div style={{ fontSize: '30px', width: '24px', height: '24px', lineHeight: '24px' }} onClick={goBack}>&lt;</div>
                         <span style={{ font: 'YaHei', fontSize: '17px' }}>用户登录</span>
                         <div id={'btn'} style={{ fontSize: '30px', width: '11px', height: '24px', lineHeight: '12px' }} onClick={showNav}>...</div>
@@ -88,7 +88,7 @@ function My(props) {
 
             // 个人信息页
             <div style={{color:'#888'}}>
-                <header style={{ backgroundColor: '#fff' }}>
+                <header style={{ backgroundColor: '#fff'}}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 16px', width: '343px', height: '25px', borderBottom: '1px solid #e5e5e5' }}>
                         <div style={{ fontSize: '30px', width: '24px', height: '24px', lineHeight: '24px' }} onClick={goBack}>&lt;</div>
                         <span style={{ font: 'YaHei', fontSize: '17px' }}>我的健客</span>
