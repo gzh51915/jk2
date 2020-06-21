@@ -6,8 +6,7 @@ import { user } from "../api/index";
 export default function Account(props) {
     let tf = true;
     function eye() {
-        console.log(props);
-
+        // console.log(props);
         if (tf) {
             document.getElementById('inner2').type = 'text'
             document.getElementById('open').setAttribute('style', 'width:20px;height:20px;position:absolute;right:50px;top:150px;display:none;outline:none')
@@ -21,18 +20,23 @@ export default function Account(props) {
         }
     }
 
-
+// 点击登录
     function login() {
         let username = document.getElementById('inner1').value
         let password = document.getElementById('inner2').value
-        user(username, password).then((res, req) => {
-            if (res.data.code === 200) {
-                sessionStorage.setItem('authorization', res.data.authorization)
-            } else {
-
-                alert('密码或用户名错误！')
-            }
-        })
+        if(username&&password){
+            user(username, password).then((res, req) => {
+                if (res.data.code === 200 && res.data.authorization!== undefined) {
+                    sessionStorage.setItem('authorization', res.data.authorization)
+                    sessionStorage.setItem('user', username)
+                } else {
+                    alert('密码或用户名错误！')
+                }
+            })
+        }else{
+            alert('请输入用户或密码')
+        }
+      
     }
     // 判断是否输入账户和密码，输入则登录按钮高亮
     function lightButton() {
@@ -50,7 +54,7 @@ export default function Account(props) {
             <EyeTwoTone id='close' onClick={eye} style={{ display: 'none' }} />
             <EyeInvisibleTwoTone id='open' onClick={eye} style={{ width: '20px', height: '20px', position: 'absolute', right: '50px', top: '150px', display: 'block', outline: 'none' }} />
             <button onClick={login} id='loginBtn' style={{ backgroundColor: '#95d1ff', width: '332px', height: '34px', border: 'none', color: '#fff', marginTop: '25px' }}>登录</button>
-            <NavLink to='/my/phone'>忘记密码</NavLink>
+            <div  style={{marginTop:'12px',fontSize:'14px'}}><NavLink to='/my/phone' ><span style={{marginTop:'14px',fontSize:'14px',textDecoration:"none",color:'#2ca3ff'}}>忘记密码</span></NavLink></div>
         </div >
     )
 }

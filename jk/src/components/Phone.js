@@ -6,22 +6,29 @@ export default function Phone(props) {
     // 获取验证码,并禁止点击直至倒计时结束
     var phoneCode = ''
     function getCode() {
-        // let inner1 = document.getElementById('inner1').value    本用来向指定手机号发送验证码
+        let inner1 = document.getElementById('inner1').value    //本用来向指定手机号发送验证码
+        if(!/^[1](([3][0-9])|([4][5-9])|([5][0-3,5-9])|([6][5,6])|([7][0-8])|([8][0-9])|([9][1,8,9]))[0-9]{8}$/.test(inner1)){
+            alert("重新输入手机号！")
+            return
+        }
         let codeBtn = document.getElementById('code')
         // 点击后移除点击事件，防止重复发送请求
+        codeBtn.removeEventListener('click', getCode)
         codeBtn.addEventListener('click', e => e.stopPropagation())
         code().then((res, req) => {
             console.log(res.data.phoneCode);
             phoneCode = res.data.phoneCode
             let num = 60
+             codeBtn.textContent = `重新发送(${num}秒)`
             // 定时器，修改按钮内冷却剩余秒数
             var count = setInterval(() => {
-                codeBtn.textContent = `重新发送(${num}秒)`
                 num--
-                if (num === 58) {
+                codeBtn.textContent = `重新发送(${num}秒)`
+                if (num === 1) {
                     // console.log('时间到');
                     clearInterval(count)
                     codeBtn.textContent = '获取验证码'
+                    codeBtn.addEventListener('click', getCode)
                 }
             }, 1000);
         })
@@ -38,11 +45,13 @@ export default function Phone(props) {
                 if (res.data.code === 400) {//如果不存在则注册
                     reg(inner1).then((res,req) => {//注册
                         sessionStorage.setItem('authorization', res.data.authorization)
-                        props.history.push('/my')
+                        sessionStorage.setItem('user', inner1)
+                        props.history.push('/my/phone')
                     })
                 } else {
                     sessionStorage.setItem('authorization', res.data.data.authorization)
-                    props.history.push('/my')
+                    sessionStorage.setItem('user', inner1)
+                    props.history.push('/my/phone')
                 }
             })
         } else {
