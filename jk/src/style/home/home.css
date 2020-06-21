@@ -1,0 +1,397 @@
+.HomeTop {
+  height: 11.46667vw;
+  width: 100vw;
+  background: #0082f0;
+  z-index: 999;
+  padding: 0 5.33333vw;
+  box-sizing: border-box;
+}
+
+.HomeTop .searchmodule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.HomeTop .searchmodule .info {
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+  color: #fff;
+}
+
+.HomeTop .searchmodule .info-bar {
+  background: #fff;
+  border-radius: 3.2vw;
+  height: 28px;
+  width: 61.6vw;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #e3e3e3;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.HomeTop .searchmodule .info-bar .icon-search {
+  width: 23px;
+  overflow: hidden;
+}
+
+.HomeTop .searchmodule .info-bar .icon-search .i-UserOutlined {
+  color: #ccc;
+  font-size: 24px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.HomeTop .searchmodule .info-bar input {
+  border: 0;
+  outline: none;
+  font-size: 14px;
+}
+
+.HomeTop .searchmodule .info-login {
+  color: #fff;
+}
+
+.HomeTop .searchmodule .info-login .icon-person {
+  font-size: 20px;
+}
+
+.swiper-container {
+  width: 100vw;
+  height: 45.33333vw;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide img {
+  width: 100vw;
+  height: 170px;
+}
+
+.floorul {
+  width: 100vw;
+  height: 45.33333vw;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.floorul .floorli {
+  width: 25%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.floorul .floorli img {
+  width: 10.66667vw;
+  height: 10.66667vw;
+  margin-left: 25px;
+}
+
+.floorul .floorli span {
+  font-size: 12px;
+}
+
+.jktt-box {
+  height: 8.8vw;
+  overflow: hidden;
+  display: flex;
+  padding: 1.33333vw 12px;
+  background: #fff;
+  margin: 0;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.jktt-box .jktt-img {
+  width: 10.66667vw;
+  height: vh(36);
+  padding: 1.33333vw;
+}
+
+.jktt-box .jktt-img img {
+  width: 8vw;
+}
+
+.jktt-box .swiper-container1 .swiper-wrapper {
+  width: 82.93333vw;
+  height: 20px !important;
+}
+
+.jktt-box .swiper-container1 .swiper-wrapper .swiper-slide {
+  height: 28px !important;
+}
+
+.jktt-box .swiper-container1 .swiper-wrapper .swiper-slide .announcement-li {
+  list-style-type: none;
+  font-size: 12px;
+  padding: 2.5px 24px 2.5px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.jktt-box .swiper-container1 .swiper-wrapper .swiper-slide .announcement-li .jktt-type {
+  display: inline-block;
+  font-size: 12px;
+  border: 1px solid #f34242;
+  color: #f34242;
+  padding: 1px 2px;
+}
+
+.select {
+  width: 100vw;
+}
+
+.select img {
+  width: 100%;
+  height: 57.5px;
+}
+
+.pro-sma-list {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.pro-sma-list .item {
+  border-radius: .1rem;
+  background: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.pro-sma-list .item img {
+  width: 100%;
+  flex-flow: nowrap;
+}
+
+.img-box {
+  width: 100vw;
+}
+
+.img-box img {
+  width: 100%;
+  height: 57.5px;
+}
+
+.img-boxthree {
+  width: 100vw;
+}
+
+.img-boxthree img {
+  width: 100%;
+  height: 50px;
+}
+
+.imgBoxfour {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.imgBoxfour .pro-picfour {
+  background-color: #fff;
+  border-radius: 2.66667vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.imgBoxfour .pro-picfour img {
+  display: block;
+  width: 100%;
+}
+
+.imgBoxfive {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.imgBoxfive .pro-picfive {
+  background-color: #fff;
+  border-radius: 2.66667vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.imgBoxfive .pro-picfive img {
+  display: block;
+  width: 100%;
+}
+
+.imgBoxsix {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.imgBoxsix .pro-picsix {
+  background-color: #fff;
+  border-radius: 2.66667vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.imgBoxsix .pro-picsix img {
+  display: block;
+  width: 100%;
+}
+
+.imgBoxseven {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.imgBoxseven .pro-picseven {
+  background-color: #fff;
+  border-radius: 2.66667vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.imgBoxseven .pro-picseven img {
+  display: block;
+  width: 100%;
+}
+
+.imgBoxeight {
+  overflow: hidden;
+}
+
+.imgBoxeight img {
+  display: block;
+  width: 100%;
+}
+
+.imgBoxnine {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.imgBoxnine .pro-picnine {
+  background-color: #fff;
+  border-radius: 2.66667vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.imgBoxnine .pro-picnine img {
+  display: block;
+  width: 100%;
+}
+
+.imgBoxten {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.imgBoxten .pro-picten {
+  background-color: #fff;
+  border-radius: 2.66667vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.imgBoxten .pro-picten img {
+  display: block;
+  width: 100%;
+}
+
+.imgBoxeleven {
+  overflow: hidden;
+}
+
+.imgBoxeleven img {
+  display: block;
+  width: 100%;
+}
+
+.imgBoxtwelve {
+  overflow: hidden;
+}
+
+.imgBoxtwelve img {
+  display: block;
+  width: 100%;
+}
+
+.recommendList {
+  padding: 0 3.2vw;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.recommendList .rl-item {
+  margin: 1.33333vw auto 0;
+  background: #fff;
+  border-radius: 1.33333vw;
+  float: left;
+}
+
+.recommendList .rl-item .rl-pic {
+  width: 46.24vw;
+  display: block;
+  height: 46.24vw;
+}
+
+.recommendList .rl-item .rl-text {
+  margin-top: 0.53333vw;
+  width: 46.24vw;
+}
+
+.recommendList .rl-item .rl-text .name {
+  font-size: 14px;
+  padding: 0 2.66667vw;
+  height: 21px;
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+.recommendList .rl-item .rl-text .info {
+  color: #999;
+  font-size: 12px;
+  height: 18px;
+  padding: 0 2.66667vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+.recommendList .rl-item .rl-text .price {
+  color: #ff5f57;
+  font-size: 14px;
+  height: 23px;
+  padding: 0 2.66667vw;
+}
+
+.imgBoxlast {
+  overflow: hidden;
+}
+
+.imgBoxlast img {
+  display: block;
+  width: 100%;
+}

@@ -3,8 +3,11 @@ $vm_base: 375;
 @function vw($px) {
     @return ($px / 375) * 100vw;
 }
+@function vh($px) {
+    @return ($px / 667) * 100vh;
+}
 
-.body{
+.body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -36,6 +39,20 @@ $vm_base: 375;
         }
         .active{
             color: #28B2F9;
+        }
+
+    }
+    .navigation {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        width: 20%;
+        color: #333;
+        i {
+            font-size: 24px;
+        }
+        div {
+            font-size: 12px;
         }
     }
 }

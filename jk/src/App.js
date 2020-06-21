@@ -5,11 +5,12 @@ import Sort from './components/Sort'
 import News from './components/News'
 import Cart from './components/Cart'
 import My from './components/My'
+import Details from './components/Details'
 
 import { withRouter, Route, Switch, Redirect } from 'react-router';
 import { NavLink } from 'react-router-dom';
-import { HomeOutlined,AppstoreOutlined,AuditOutlined,ShoppingCartOutlined,UserOutlined } from '@ant-design/icons';
-import { Button } from 'antd'
+import { HomeOutlined, AppstoreOutlined, AuditOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
+// import { Button } from 'antd'
 import './style/index.css'
 
 
@@ -18,6 +19,12 @@ function App(props) {
   let isShow = 'block';
   console.log(props)
   if(props.location.pathname.indexOf('News')!=-1 ){
+    isShow = 'none'
+  }
+  else{
+    isShow = 'block'
+  }
+  if(props.location.pathname==='/details'){
     isShow = 'none'
   }
   else{

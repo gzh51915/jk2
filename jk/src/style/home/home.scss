@@ -1,0 +1,445 @@
+@function vw($px) {
+    @return ($px / 375) * 100vw;
+}
+
+.HomeTop {
+    height: vw(43);
+    width: 100vw;
+    background: #0082f0;
+    z-index: 999;
+    padding: 0 vw(20);
+    box-sizing: border-box;
+
+    // opacity: .75;
+    .searchmodule {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        height: 100%;
+        justify-content: space-around;
+
+        .info {
+            font-size: 20px;
+            font-weight: 900;
+            font-style: italic;
+            color: #fff;
+        }
+
+        .info-bar {
+            background: #fff;
+            border-radius: vw(12);
+            height: 28px;
+            width: vw(231);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            border: 1px solid #e3e3e3;
+            padding-left: 10px;
+            box-sizing: border-box;
+
+            .icon-search {
+                width: 23px;
+                overflow: hidden;
+
+                .i-UserOutlined {
+                    color: #ccc;
+                    font-size: 24px;
+                    margin-top: 5px;
+                    box-sizing: border-box;
+                }
+            }
+
+            input {
+                border: 0;
+                outline: none;
+                font-size: 14px;
+            }
+        }
+
+        .info-login {
+            color: #fff;
+
+            .icon-person {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+//  头部结束---------------------------------------------------------------------------------------------------
+
+.swiper-container {
+    width: 100vw;
+    height: vw(170);
+
+    .swiper-wrapper {
+        .swiper-slide {
+            img {
+                width: 100vw;
+                height: 170px;
+                ;
+            }
+        }
+    }
+}
+
+// 轮播图 BoxBanner 结束------------------------------------------------------------------------------------------
+
+.floorul {
+    width: 100vw;
+    height: vw(170);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px 0;
+    margin: 0;
+
+    .floorli {
+        width: 25%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+
+        img {
+            width: vw(40);
+            height: vw(40);
+            margin-left: 25px;
+        }
+
+        span {
+            font-size: 12px;
+        }
+    }
+}
+
+//  floorul 导航结束--------------------------------------------------------------------------------------------
+
+.jktt-box {
+    height: vw(33);
+    overflow: hidden;
+    display: flex;
+    padding: vw(5) 12px;
+    background: #fff;
+    margin: 0;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+    .jktt-img {
+        width: vw(40);
+        height: vh(36);
+        padding: vw(5);
+
+        img {
+            width: vw(30);
+        }
+    }
+
+    .swiper-container1 {
+        .swiper-wrapper {
+            width: vw(311);
+            height: 20px !important;
+
+            .swiper-slide {
+                height: 28px !important;
+
+                .announcement-li {
+                    list-style-type: none;
+                    font-size: 12px;
+                    padding: 2.5px 24px 2.5px 0;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+
+                    .jktt-type {
+                        display: inline-block;
+                        font-size: 12px;
+                        border: 1px solid #f34242;
+                        color: #f34242;
+                        padding: 1px 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  jktt-box 头条 结束--------------------------------------------------------------------------
+
+.select {
+    width: vw(375);
+
+    img {
+        width: 100%;
+        height: 57.5px;
+    }
+}
+
+// select 精选 结束---------------------------------------------------------------------------
+
+.pro-sma-list {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: vw(375);
+
+    .item {
+        border-radius: .1rem;
+        background: #fff;
+        text-align: center;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            flex-flow: nowrap;
+        }
+    }
+}
+
+
+
+// pro-sma-list 结束--------------------------------------------------------------------
+
+.img-box {
+    width: vw(375);
+
+    img {
+        width: 100%;
+        height: 57.5px;
+    }
+}
+
+// img-box 结束0-------------------------------------------------------------------------
+
+.img-boxthree {
+    width: vw(375);
+
+    img {
+        width: 100%;
+        height: 50px;
+    }
+}
+
+// img-boxthree  结束--------------------------------------------------------------------
+
+.imgBoxfour {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    .pro-picfour {
+        background-color: #fff;
+        border-radius: vw(10);
+        overflow: hidden;
+        position: relative;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+// imgBoxfour 结束-----------------------------------------------------------------------
+.imgBoxfive {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    .pro-picfive {
+        background-color: #fff;
+        border-radius: vw(10);
+        overflow: hidden;
+        position: relative;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+// imgBoxfive 结束-----------------------------------------------------------------------
+.imgBoxsix {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    .pro-picsix {
+        background-color: #fff;
+        border-radius: vw(10);
+        overflow: hidden;
+        position: relative;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+// imgBoxsix 结束 --------------------------------------------------------------------------
+
+.imgBoxseven {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    .pro-picseven {
+        background-color: #fff;
+        border-radius: vw(10);
+        overflow: hidden;
+        position: relative;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+// imgBoxseven 结束--------------------------------------------------------------------------
+.imgBoxeight {
+    overflow: hidden;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+// imgBoxeight 结束 ------------------------------------------------------------------------
+.imgBoxnine {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    .pro-picnine {
+        background-color: #fff;
+        border-radius: vw(10);
+        overflow: hidden;
+        position: relative;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+
+// imgBoxnine 结束 ------------------------------------------------------------------------
+.imgBoxten {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    .pro-picten {
+        background-color: #fff;
+        border-radius: vw(10);
+        overflow: hidden;
+        position: relative;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+
+// imgBoxten 结束 ------------------------------------------------------------------------
+.imgBoxeleven {
+    overflow: hidden;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+// imgBoxeleven 结束 ------------------------------------------------------------------------
+.imgBoxtwelve {
+    overflow: hidden;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+// imgBoxtwelve 结束 ------------------------------------------------------------------------
+
+.recommendList {
+    padding: 0 vw(12);
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .rl-item {
+        margin: vw(5) auto 0;
+        background: #fff;
+        border-radius: vw(5);
+        float: left;
+
+        .rl-pic {
+            width: vw(173.4);
+            display: block;
+            height: vw(173.4);
+        }
+
+        .rl-text {
+            margin-top: vw(2);
+            width: vw(173.4);
+
+            .name {
+                font-size: 14px;
+                padding: 0 vw(10);
+                height: 21px;
+                color: #000000;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: block;
+            }
+
+            .info {
+                color: #999;
+                font-size: 12px;
+                height: 18px;
+                padding: 0 vw(10);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: block;
+            }
+
+            .price {
+                color: #ff5f57;
+                font-size: 14px;
+                height: 23px;
+                padding: 0 vw(10);
+            }
+        }
+    }
+}
+
+// recommendList 结束 ---------------------------------------------------------------------------
+.imgBoxlast {
+    overflow: hidden;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+// imgBoxlast  结束--------------------------------------------------------------------------------

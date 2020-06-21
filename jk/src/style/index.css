@@ -7,7 +7,11 @@
 .App {
   width: 100vw;
   position: relative;
-  background: #fff;
+  background: rgb(250, 231, 231);
+  display: flex;
+  flex-direction: column;
+  justify-items: space-between;
+  height: 100vh;
 }
 
 .App .Appa {
@@ -16,7 +20,11 @@
   bottom: 0vw;
 }
 
-.App .Appa .navigation {
+.App .Appa .active {
+  color: #28B2F9;
+}
+
+.App .navigation {
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -24,14 +32,10 @@
   color: #333;
 }
 
-.App .Appa .navigation i {
+.App .navigation i {
   font-size: 24px;
 }
 
-.App .Appa .navigation div {
+.App .navigation div {
   font-size: 12px;
-}
-
-.App .Appa .active {
-  color: #28B2F9;
 }
