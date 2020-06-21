@@ -2,63 +2,67 @@ import React, { Component } from 'react'
 // import { Route, Switch, Redirect } from 'react-router';
 import { SearchOutlined, RightOutlined, StarFilled, MessageOutlined, ShoppingCartOutlined, ClockCircleOutlined } from '@ant-design/icons';
 import { InputNumber, Badge } from 'antd';
-import { homeBanner, detailsData } from '../api';
+import { detailsData, detailsComments } from '../api/index'
 import '../style/details/details.css'
 import '../img/3.png'
 import 'antd/dist/antd.css';
 
 import store from '../store'
-store.subscribe(()=>{
+store.subscribe(() => {
     console.log(store.getState());
-    
+
 })
 class details extends Component {
 
 
-        onChange = (value)=> {
-            console.log('changed', value);
-        }
-        gohome = ()=> {
-            const { history } = this.props
-            console.log(this.props);
-            history.push('/cart')
-        }
-        addCart = () => {
-            store.dispatch({type:'ADD_TO_CART',goods:this.state.data})
+    onChange = (value) => {
+        console.log('changed', value);
+    }
+    gohome = () => {
+        const { history } = this.props
+        console.log(this.props);
+        history.push('/cart')
+    }
+    addCart = () => {
+        store.dispatch({ type: 'ADD_TO_CART', goods: this.state.data })
 
-        }
+    }
 
     state = {
-        data:{},
-        details: '',
+        data: {},
+        detailsImg: '',
         visible: false,
         evalution: '',
-        evaluationItem: []
+        evaluationItem: [],
+        detalisPrice: [],
+        detalisName: [],
+        detalisintroduction: [],
+        detalisspecifications: []
     }
     componentDidMount() {
-        homeBanner().then((res, req) => {
-            // console.log(res.data.data[17].rooms);
-            // console.log(this.props);
-            const { search } = this.props.location
-            const num = search.substr(1)
-            const a = res.data.data[17].rooms.filter(item => item.productCode == num)[0]
-            console.log(a);
+        const { search } = this.props.location
+        const num = search.substr(1)
+        detailsData(num).then((res, req) => {
+            // console.log('tupian',res.data.data[0].product.images[0].imageUrl)
+            // const a = res.data.data[0].product.images[0].imageUrl
+            // console.log(a);
             this.setState({
-                details: a,
-
+                detailsImg: res.data.data[0].product.images[0].imageUrl,
+                detalisPrice: res.data.data[0].appPrice.price,
+                detalisName: res.data.data[0].product.product.productName,
+                detalisintroduction: res.data.data[0].product.product.introduction,
+                detalisspecifications: res.data.data[0].product.packings[0].packing
             })
-            // console.log(this.state.details.promotionPrice);
+            console.log(this.state.detalisspecifications);
         })
-        detailsData().then((res, req) => {
-            console.log(res.data.page)
+        detailsComments().then((res, req) => {
+            // console.log(res);
             this.setState({
-                evalution: res.data.info,
-                evaluationItem: res.data.page
             })
         })
     }
     componentDidUpdate() {
-        console.log(11, this.state.details.promotionPrice);
+
     }
 
     render() {
@@ -79,24 +83,32 @@ class details extends Component {
                     </header>
 
                     <div className="detailsImageUrl">
-                        <img src={this.state.details.productImageUrl} alt="" />
-                        {/* {this.state.details} */}
+                        <img src={this.state.detailsImg} alt="" />
+
                     </div>
                     {/* 顶部图片 结束---------------------------------------------------------------------------- */}
 
                     <div className="product-detail">
                         <div className="detailsPrice" style={{ color: "#FF4A4A", fontSize: "20px", fontWeight: "700" }}>
                             <i className="symbol" style={{ fontSize: "12px" }}>￥</i>
-                            {(parseInt(this.state.details.promotionPrice) / 100).toFixed(2)}
+                            {(parseInt(this.state.detalisPrice) / 100).toFixed(2)}
                         </div>
 
                         <div className="product-name">
-                            {this.state.details.productName}
+                            {this.state.detalisName}
                         </div>
 
                         <div style={{ height: '65.3px', marginTop: '5px' }}>
                             <img src={require('../img/3.png')} style={{ width: '351px', height: '61.5px' }} alt="" />
                         </div>
+
+                        <div><span style={{ color: '#000000', fontSize: "13px" }}>{this.state.detalisintroduction}</span></div>
+                    </div>
+
+
+                    <div style={{paddingLeft:"10px",boxSizing:"border-box"}}>
+                        <span style={{fontSize:"13px",color:"#999999",paddingRight:"10px"}}>规格</span>
+                        <span style={{fontSize:"14px",color:"#000000"}}>{this.state.detalisspecifications}</span>
                     </div>
 
                     {/*  product-detail 基本详情结束--------------------------------------------------------------------- */}
