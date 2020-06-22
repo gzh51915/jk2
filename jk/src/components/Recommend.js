@@ -57,7 +57,7 @@ class Recommend extends Component{
                         // <img src={this.state.datalist[0].healthimage}></img>
                     } */}
                     <div className="first_image">
-                        <img src={this.state.datalist[0].cover[0]} className="bigImg"></img>
+                        <img src={this.state.datalist[0].cover[0]} className="bigImg" onClick={()=>{this.goto(this.state.datalist[0].articleId)}}></img>
                         <div className='box-line'>
                             <h2>{this.state.datalist[0].title}</h2>
                         </div>

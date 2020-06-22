@@ -1,0 +1,17 @@
+$vm_base: 375;
+
+@function vw($px) {
+    @return ($px / 375) * 100vw;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ img{
+    width: vw(375);
+    height: vw(237);
+    // padding:vw(10) vw(10);
+    max-width: 100%;
+    height: auto;
+}
