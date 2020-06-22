@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import {reqPageItem} from '../api'
+import '../style/News/PageItem.css'
 class PageItem extends Component{
     state = {
         title:'',
