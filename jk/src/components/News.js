@@ -37,7 +37,7 @@ export default class News extends Component {
                         <Route path="/News/liver" component={Liver} exact></Route>   
                         <Route path='/News/blood' component={Blood} exact></Route>
                         <Route path="/News/:type/article/:id" component={PageItem} ></Route>
-                        <Redirect to='/News/recommend'/>
+                        <Redirect from='/News' to='/News/recommend'/>
                     </Switch>
                     
                 </div>
