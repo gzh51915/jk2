@@ -26,6 +26,13 @@ export const reqPageItem = (id)=>{
 export const homeBanner = () => {
     return axios.get('http://10.3.135.5:1915/api/home')
 }
+export const reqSort= (pid) => {
+    return axios.post(`http://10.3.135.5:1915/api/category/?platform=1&pid=${pid}`)
+}
+export const reqList=()=>{
+    return axios.post('http://10.3.135.5:1915/api/category?platform=1')
+}
+
 // import axios from 'axios'
 
 // export const homeBanner=()=>{
